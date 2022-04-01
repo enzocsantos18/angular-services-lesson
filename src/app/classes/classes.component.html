@@ -1,0 +1,27 @@
+<h2>Disciplinas</h2>
+
+<div style="background: lightblue; padding: 10px;">
+  <label for="name">Nome: </label>
+  <input id="name" type="text" [(ngModel)]="name" /> <br />
+  <label for="weekDate">Dia Semana: </label>
+  <input id="weekDate" type="text" [(ngModel)]="weekDate" /><br />
+  <label for="time">Horário: </label>
+  <input id="time" type="text" [(ngModel)]="time" /><br />
+
+  <button (click)="add()">adicionar</button>
+</div>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Dia Semana</th>
+    <th>Horário</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let class of classes.getClasses(); index as i">
+    <td>{{ class.name }}</td>
+    <td>{{ class.weekDate }}</td>
+    <td>{{ class.time }}</td>
+    <td><button (click)="classes.remove(i)">remover</button></td>
+  </tr>
+</table>

@@ -7,7 +7,6 @@ import { HelloComponent } from './hello.component';
 import { ClassesService } from './classes.service';
 import { TimerService } from './timer.service';
 import { ClassesComponent } from './classes/classes.component';
-import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { TimerComponent } from './timer/timer.component';
 
@@ -16,10 +15,6 @@ import { TimerComponent } from './timer/timer.component';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent,
-      },
       {
         path: 'timer',
         component: TimerComponent,
@@ -35,7 +30,6 @@ import { TimerComponent } from './timer/timer.component';
     HelloComponent,
     TimerComponent,
     ClassesComponent,
-    HomeComponent,
   ],
   bootstrap: [AppComponent],
   providers: [ClassesService, TimerService],

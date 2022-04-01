@@ -1,5 +1,9 @@
-<form>
-  <label for="ms">Quanto tempo em milisegundos? </label>
-  <input id="ms" #ms type="number" />
-  <!-- <button (click)="timer.start(ms)">Iniciar</button> -->
-</form>
+<h1>Timer</h1>
+
+<label for="ms">Quanto tempo em milisegundos? </label>
+<input id="ms" type="number" step="1" [(ngModel)]="ms" />
+<button (click)="start()">Iniciar</button>
+
+<p>Counter: {{ timer.getCount() }}</p>
+
+<button (click)="timer.stop()">Parar</button>

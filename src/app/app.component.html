@@ -1,4 +1,13 @@
-<a [routerLink]="['']">Home</a> | <a [routerLink]="['timer']">Timer</a> |
-<a [routerLink]="['classes']">Aulas</a>
+<header>
+  <p><strong>Nome:</strong> Enzo de Carvalho Santos</p>
+  <p><strong>RA: </strong>0050832011007</p>
+
+  <nav>
+    <a [routerLink]="['timer']">Timer</a> |
+    <a [routerLink]="['classes']">Disciplinas</a> |
+    <span>Counter: {{ timer.getCount() }}</span>
+  </nav>
+</header>
+
 <hr />
 <router-outlet></router-outlet>
